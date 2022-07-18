@@ -1,0 +1,40 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    <title>EasyShortener</title>
+{% endblock %}
+
+{% block content %}
+{#            <section>#}
+{#            <span></span>#}
+{#            <span></span>#}
+{#            <span></span>#}
+{#            <span></span>#}
+{#            <span></span>#}
+{#            <span></span>#}
+{#            <span></span>#}
+{#            <span></span>#}
+{#            <span></span>#}
+{#            <span></span>#}
+{#        </section>#}
+
+    <section>
+        <h2>Введите ссылку</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <input type="url" id='link' name="link" required="">
+                <label for='link'>URL</label>
+                <div>
+                    <button type="Submit">Сократить</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div class="link">
+        <a class="link" href="{{ give_to_user_short_url }}">{{ give_to_user_short_url }}</a>
+    </div>
+
+{% endblock %}
+
+
