@@ -17,10 +17,6 @@ def index(request):
         current_user.is_authenticated
     )  # указывает аутентифицирован ли пользователь
 
-    # print(current_user)
-
-    # поставить блэк
-
     if request.method == "POST":
         user_url = request.POST.get("link")  # получает данные из формы
 
