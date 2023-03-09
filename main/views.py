@@ -42,7 +42,7 @@ def index(request):
                 # иначе
                 Links(
                     creator=current_user, original_url=user_url, short_url=shot
-                ).save()  # сохраняем в бд
+                ).save()  # сохраняем в бд.
                 give_to_user_short_url = (
                     request.build_absolute_uri("/") + shot
                 )  # формируем короткий юрл
