@@ -36,3 +36,5 @@ Makefile
 doc-dev
 /venv/
 
+/.idea/
+/.venv/
